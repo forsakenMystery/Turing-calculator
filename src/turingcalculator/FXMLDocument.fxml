@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+<AnchorPane prefHeight="435.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="turingcalculator.FXMLDocumentController">
+	<BorderPane AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+		<top>
+         <VBox alignment="TOP_CENTER" spacing="5.0">
+            <BorderPane.margin>
+               <Insets bottom="10.0" />
+            </BorderPane.margin>
+            <children>
+      			<TextField fx:id="resultTextField" alignment="CENTER_RIGHT" editable="false" prefHeight="75.0" prefWidth="295.0">
+                  <font>
+                     <Font size="25.0" />
+                  </font>
+               </TextField>
+               <TextArea fx:id="resultTuring" editable="false" prefHeight="75.0" prefWidth="295.0" wrapText="true">
+                  <font>
+                     <Font size="25.0" />
+                  </font></TextArea>
+            </children>
+         </VBox>
+		</top>
+		<center>
+			<GridPane hgap="5" vgap="5">
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleClearButtonAction" text="C" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="7" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="8" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="9" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="4" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="5" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="6" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="1" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="2" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="3" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperandButtonAction" text="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperatorButtonAction" text="=" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperatorButtonAction" text="/" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperatorButtonAction" text="*" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperatorButtonAction" text="-" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+				<Button maxHeight="Infinity" maxWidth="Infinity" onAction="#handleOperatorButtonAction" text="+" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Button>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+			</GridPane>
+		</center>
+	</BorderPane>
+</AnchorPane>
